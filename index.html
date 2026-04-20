@@ -1,0 +1,1828 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Gela Mix Gelato – Gelato Artesanal Premium | Pinhais - PR</title>
+  <meta name="description" content="Gela Mix Gelato – Gelato artesanal premium em Pinhais-PR. Avaliação 5.0. Variedade de gelatos, açaí e bebidas especiais."/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"/>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --cream:    #FAF6F0;
+      --ivory:    #F3EDE2;
+      --blush:    #EDD9C8;
+      --mauve:    #C9A99A;
+      --dusty:    #9E7B72;
+      --gold:     #C8A96A;
+      --gold-lt:  #E4C98A;
+      --mocha:    #5C3D2E;
+      --espresso: #2E1A10;
+      --lilac:    #D4C0D4;
+      --soft-plum:#A07898;
+      --white:    #FFFFFF;
+      --text:     #3A2418;
+      --text-lt:  #7A5C50;
+
+      --ff-disp: 'Cormorant Garamond', serif;
+      --ff-body: 'DM Sans', sans-serif;
+      --ease-smooth: cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: var(--ff-body);
+      background: var(--cream);
+      color: var(--text);
+      overflow-x: hidden;
+    }
+
+    /* ─── NOISE TEXTURE OVERLAY ─── */
+    body::before {
+      content:'';
+      position:fixed;
+      inset:0;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.03'/%3E%3C/svg%3E");
+      pointer-events:none;
+      z-index:9999;
+      opacity:.4;
+    }
+
+    /* ─── SCROLLBAR ─── */
+    ::-webkit-scrollbar { width: 6px; }
+    ::-webkit-scrollbar-track { background: var(--ivory); }
+    ::-webkit-scrollbar-thumb { background: var(--mauve); border-radius: 3px; }
+
+    /* ─── SELECTION ─── */
+    ::selection { background: var(--blush); color: var(--mocha); }
+
+    /* ═══════════════════════════════════════════
+       HEADER / NAV
+    ═══════════════════════════════════════════ */
+    header {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 1000;
+      padding: 0 2rem;
+      transition: background 0.4s var(--ease-smooth), box-shadow 0.4s var(--ease-smooth), padding 0.4s;
+    }
+    header.scrolled {
+      background: rgba(250,246,240,0.96);
+      backdrop-filter: blur(12px);
+      box-shadow: 0 2px 30px rgba(92,61,46,0.08);
+      padding: 0 2rem;
+    }
+    nav {
+      max-width: 1280px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 80px;
+    }
+    .logo {
+      display: flex;
+      flex-direction: column;
+      line-height: 1;
+      text-decoration: none;
+    }
+    .logo-top {
+      font-family: var(--ff-disp);
+      font-size: 1.55rem;
+      font-weight: 600;
+      color: var(--mocha);
+      letter-spacing: 0.02em;
+    }
+    .logo-sub {
+      font-family: var(--ff-body);
+      font-size: 0.62rem;
+      font-weight: 300;
+      letter-spacing: 0.28em;
+      text-transform: uppercase;
+      color: var(--gold);
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 2.2rem;
+      list-style: none;
+    }
+    .nav-links a {
+      font-size: 0.82rem;
+      font-weight: 400;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--text-lt);
+      text-decoration: none;
+      position: relative;
+      transition: color 0.3s;
+    }
+    .nav-links a::after {
+      content: '';
+      position: absolute;
+      bottom: -3px; left: 0;
+      width: 0; height: 1px;
+      background: var(--gold);
+      transition: width 0.35s var(--ease-smooth);
+    }
+    .nav-links a:hover { color: var(--mocha); }
+    .nav-links a:hover::after { width: 100%; }
+
+    .btn-wa-nav {
+      background: var(--gold);
+      color: var(--espresso) !important;
+      font-weight: 500 !important;
+      font-size: 0.78rem !important;
+      letter-spacing: 0.14em !important;
+      padding: 0.65rem 1.4rem;
+      border-radius: 50px;
+      text-decoration: none;
+      transition: background 0.3s, transform 0.2s, box-shadow 0.3s;
+      box-shadow: 0 4px 16px rgba(200,169,106,0.3);
+    }
+    .btn-wa-nav:hover {
+      background: var(--gold-lt);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(200,169,106,0.45);
+    }
+
+    /* ─── HAMBURGER ─── */
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      cursor: pointer;
+      padding: 6px;
+      border: none;
+      background: transparent;
+    }
+    .hamburger span {
+      display: block;
+      width: 24px; height: 1.5px;
+      background: var(--mocha);
+      transition: transform 0.3s, opacity 0.3s;
+      transform-origin: center;
+    }
+    .hamburger.open span:nth-child(1) { transform: translateY(6.5px) rotate(45deg); }
+    .hamburger.open span:nth-child(2) { opacity: 0; }
+    .hamburger.open span:nth-child(3) { transform: translateY(-6.5px) rotate(-45deg); }
+
+    .mobile-menu {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: var(--cream);
+      z-index: 999;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 2.5rem;
+    }
+    .mobile-menu.open { display: flex; animation: fadeIn 0.3s ease; }
+    .mobile-menu a {
+      font-family: var(--ff-disp);
+      font-size: 2rem;
+      font-weight: 400;
+      color: var(--mocha);
+      text-decoration: none;
+      letter-spacing: 0.04em;
+      transition: color 0.3s;
+    }
+    .mobile-menu a:hover { color: var(--gold); }
+
+    /* ═══════════════════════════════════════════
+       HERO
+    ═══════════════════════════════════════════ */
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      position: relative;
+      overflow: hidden;
+      padding-top: 80px;
+    }
+
+    /* Gradient bg */
+    .hero-bg {
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(ellipse 80% 60% at 70% 40%, rgba(237,217,200,0.55) 0%, transparent 70%),
+        radial-gradient(ellipse 60% 80% at 20% 70%, rgba(212,192,212,0.3) 0%, transparent 70%),
+        linear-gradient(160deg, var(--cream) 0%, var(--ivory) 50%, var(--blush) 100%);
+    }
+
+    /* Decorative circles */
+    .hero-circle {
+      position: absolute;
+      border-radius: 50%;
+      pointer-events: none;
+    }
+    .hero-circle-1 {
+      width: 600px; height: 600px;
+      right: -100px; top: -80px;
+      background: radial-gradient(circle, rgba(200,169,106,0.12) 0%, transparent 70%);
+      animation: float 8s ease-in-out infinite;
+    }
+    .hero-circle-2 {
+      width: 400px; height: 400px;
+      left: -80px; bottom: 0;
+      background: radial-gradient(circle, rgba(212,192,212,0.2) 0%, transparent 70%);
+      animation: float 10s ease-in-out infinite reverse;
+    }
+
+    @keyframes float {
+      0%,100% { transform: translateY(0) scale(1); }
+      50%      { transform: translateY(-30px) scale(1.04); }
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 4rem 2rem;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+      align-items: center;
+      width: 100%;
+    }
+
+    .hero-text { }
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: rgba(200,169,106,0.15);
+      border: 1px solid rgba(200,169,106,0.35);
+      border-radius: 50px;
+      padding: 0.4rem 1rem;
+      font-size: 0.72rem;
+      font-weight: 500;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 1.5rem;
+      animation: slideDown 0.8s var(--ease-smooth) both;
+    }
+    .hero-badge .star { color: var(--gold); font-size: 0.85rem; }
+
+    .hero-h1 {
+      font-family: var(--ff-disp);
+      font-size: clamp(2.8rem, 5vw, 4.5rem);
+      font-weight: 300;
+      line-height: 1.12;
+      color: var(--mocha);
+      margin-bottom: 0.4rem;
+      animation: slideUp 0.9s var(--ease-smooth) 0.1s both;
+    }
+    .hero-h1 em {
+      font-style: italic;
+      font-weight: 400;
+      color: var(--soft-plum);
+    }
+    .hero-h1-2 {
+      font-family: var(--ff-disp);
+      font-size: clamp(1.4rem, 2.5vw, 2rem);
+      font-weight: 300;
+      font-style: italic;
+      color: var(--dusty);
+      margin-bottom: 1.5rem;
+      animation: slideUp 0.9s var(--ease-smooth) 0.2s both;
+    }
+
+    .hero-sub {
+      font-size: 1rem;
+      font-weight: 300;
+      color: var(--text-lt);
+      line-height: 1.75;
+      max-width: 440px;
+      margin-bottom: 2.5rem;
+      animation: slideUp 0.9s var(--ease-smooth) 0.3s both;
+    }
+
+    .hero-btns {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+      animation: slideUp 0.9s var(--ease-smooth) 0.4s both;
+    }
+
+    .btn-primary {
+      background: var(--mocha);
+      color: var(--cream);
+      padding: 0.9rem 2rem;
+      border-radius: 50px;
+      text-decoration: none;
+      font-size: 0.85rem;
+      font-weight: 500;
+      letter-spacing: 0.08em;
+      transition: background 0.3s, transform 0.2s, box-shadow 0.3s;
+      box-shadow: 0 6px 20px rgba(92,61,46,0.25);
+    }
+    .btn-primary:hover {
+      background: var(--espresso);
+      transform: translateY(-3px);
+      box-shadow: 0 12px 32px rgba(92,61,46,0.35);
+    }
+
+    .btn-ghost {
+      background: transparent;
+      color: var(--mocha);
+      padding: 0.9rem 2rem;
+      border-radius: 50px;
+      border: 1.5px solid var(--mauve);
+      text-decoration: none;
+      font-size: 0.85rem;
+      font-weight: 400;
+      letter-spacing: 0.08em;
+      transition: all 0.3s;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    .btn-ghost:hover {
+      background: var(--mocha);
+      color: var(--cream);
+      border-color: var(--mocha);
+      transform: translateY(-3px);
+    }
+
+    /* ─── HERO VISUAL ─── */
+    .hero-visual {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      animation: fadeInRight 1s var(--ease-smooth) 0.2s both;
+    }
+
+    .hero-img-wrapper {
+      width: 460px;
+      height: 520px;
+      border-radius: 60% 40% 55% 45% / 50% 60% 40% 50%;
+      overflow: hidden;
+      position: relative;
+      box-shadow: 0 40px 100px rgba(92,61,46,0.2), 0 0 0 1px rgba(200,169,106,0.2);
+      animation: morphShape 12s ease-in-out infinite;
+    }
+    @keyframes morphShape {
+      0%,100% { border-radius: 60% 40% 55% 45% / 50% 60% 40% 50%; }
+      33%      { border-radius: 45% 55% 40% 60% / 55% 45% 60% 40%; }
+      66%      { border-radius: 55% 45% 60% 40% / 40% 55% 45% 60%; }
+    }
+
+    .hero-img-wrapper img {
+      width: 100%; height: 100%;
+      object-fit: cover;
+      transition: transform 0.6s var(--ease-smooth);
+    }
+    .hero-img-wrapper:hover img { transform: scale(1.05); }
+
+    .hero-floating-card {
+      position: absolute;
+      background: rgba(250,246,240,0.95);
+      backdrop-filter: blur(12px);
+      border: 1px solid rgba(200,169,106,0.25);
+      border-radius: 20px;
+      padding: 0.9rem 1.2rem;
+      box-shadow: 0 16px 40px rgba(92,61,46,0.12);
+      animation: floatCard 6s ease-in-out infinite;
+    }
+    .hero-floating-card.card-1 {
+      bottom: 60px; left: -30px;
+      animation-delay: 0s;
+    }
+    .hero-floating-card.card-2 {
+      top: 60px; right: -20px;
+      animation-delay: -3s;
+    }
+    @keyframes floatCard {
+      0%,100% { transform: translateY(0); }
+      50%      { transform: translateY(-10px); }
+    }
+    .card-stars { color: var(--gold); font-size: 0.85rem; letter-spacing: 2px; }
+    .card-label { font-size: 0.72rem; font-weight: 500; color: var(--text-lt); margin-top: 2px; letter-spacing: 0.05em; }
+    .card-value { font-family: var(--ff-disp); font-size: 1.4rem; font-weight: 600; color: var(--mocha); }
+    .card-emoji { font-size: 1.5rem; }
+    .card-text  { font-size: 0.78rem; font-weight: 500; color: var(--text-lt); }
+
+    /* Scroll indicator */
+    .scroll-hint {
+      position: absolute;
+      bottom: 2rem; left: 50%;
+      transform: translateX(-50%);
+      display: flex; flex-direction: column; align-items: center; gap: 8px;
+      animation: fadeIn 1s 1.5s both;
+      cursor: pointer;
+    }
+    .scroll-hint span { font-size: 0.65rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--text-lt); }
+    .scroll-arrow {
+      width: 20px; height: 30px;
+      border: 1.5px solid var(--mauve);
+      border-radius: 10px;
+      position: relative;
+      overflow: hidden;
+    }
+    .scroll-arrow::after {
+      content:'';
+      width: 4px; height: 4px;
+      background: var(--gold);
+      border-radius: 50%;
+      position: absolute;
+      left: 50%; top: 6px;
+      transform: translateX(-50%);
+      animation: scrollDot 1.8s ease-in-out infinite;
+    }
+    @keyframes scrollDot {
+      0%   { opacity:1; top: 6px; }
+      100% { opacity:0; top: 18px; }
+    }
+
+    /* ═══════════════════════════════════════════
+       SECTION COMMONS
+    ═══════════════════════════════════════════ */
+    section { padding: 7rem 2rem; }
+    .container { max-width: 1280px; margin: 0 auto; }
+
+    .section-eyebrow {
+      font-size: 0.7rem;
+      font-weight: 500;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 0.8rem;
+      display: flex;
+      align-items: center;
+      gap: 0.8rem;
+    }
+    .section-eyebrow::before {
+      content: '';
+      display: inline-block;
+      width: 24px; height: 1px;
+      background: var(--gold);
+    }
+
+    .section-title {
+      font-family: var(--ff-disp);
+      font-size: clamp(2.2rem, 4vw, 3.2rem);
+      font-weight: 300;
+      color: var(--mocha);
+      line-height: 1.2;
+      margin-bottom: 1.2rem;
+    }
+    .section-title em { font-style: italic; color: var(--soft-plum); }
+
+    .section-desc {
+      font-size: 1rem;
+      font-weight: 300;
+      color: var(--text-lt);
+      line-height: 1.75;
+      max-width: 520px;
+    }
+
+    /* ═══════════════════════════════════════════
+       DIFERENCIAIS
+    ═══════════════════════════════════════════ */
+    .diferenciais {
+      background: var(--ivory);
+      position: relative;
+      overflow: hidden;
+    }
+    .diferenciais::before {
+      content:'';
+      position:absolute;
+      width:500px; height:500px;
+      background: radial-gradient(circle, rgba(200,169,106,0.07) 0%, transparent 70%);
+      top:-100px; right:-100px;
+      border-radius:50%;
+      pointer-events:none;
+    }
+
+    .dif-header { margin-bottom: 4rem; }
+    .dif-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1.5rem;
+    }
+
+    .dif-card {
+      background: var(--cream);
+      border: 1px solid rgba(200,169,106,0.15);
+      border-radius: 24px;
+      padding: 2.2rem 1.8rem;
+      position: relative;
+      overflow: hidden;
+      transition: transform 0.4s var(--ease-smooth), box-shadow 0.4s, border-color 0.4s;
+      cursor: default;
+    }
+    .dif-card::before {
+      content:'';
+      position: absolute;
+      bottom: 0; left: 0; right: 0;
+      height: 3px;
+      background: linear-gradient(90deg, var(--gold), var(--soft-plum));
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform 0.4s var(--ease-smooth);
+    }
+    .dif-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 24px 60px rgba(92,61,46,0.12);
+      border-color: rgba(200,169,106,0.3);
+    }
+    .dif-card:hover::before { transform: scaleX(1); }
+
+    .dif-icon {
+      font-size: 2.2rem;
+      margin-bottom: 1.2rem;
+      display: block;
+    }
+    .dif-card-title {
+      font-family: var(--ff-disp);
+      font-size: 1.3rem;
+      font-weight: 600;
+      color: var(--mocha);
+      margin-bottom: 0.6rem;
+    }
+    .dif-card-desc {
+      font-size: 0.88rem;
+      font-weight: 300;
+      color: var(--text-lt);
+      line-height: 1.7;
+    }
+
+    /* ═══════════════════════════════════════════
+       CARDÁPIO
+    ═══════════════════════════════════════════ */
+    .cardapio { background: var(--cream); }
+    .cardapio-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      margin-bottom: 3rem;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+    }
+
+    .cardapio-tabs {
+      display: flex;
+      gap: 0.5rem;
+      background: var(--ivory);
+      padding: 0.4rem;
+      border-radius: 50px;
+      border: 1px solid rgba(200,169,106,0.2);
+    }
+    .tab-btn {
+      border: none;
+      background: transparent;
+      padding: 0.55rem 1.3rem;
+      border-radius: 50px;
+      font-family: var(--ff-body);
+      font-size: 0.8rem;
+      font-weight: 400;
+      letter-spacing: 0.05em;
+      color: var(--text-lt);
+      cursor: pointer;
+      transition: all 0.3s;
+    }
+    .tab-btn.active {
+      background: var(--mocha);
+      color: var(--cream);
+    }
+    .tab-btn:hover:not(.active) { color: var(--mocha); }
+
+    .produtos-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.8rem;
+    }
+
+    .produto-card {
+      background: var(--white);
+      border-radius: 24px;
+      overflow: hidden;
+      border: 1px solid rgba(237,217,200,0.5);
+      transition: transform 0.4s var(--ease-smooth), box-shadow 0.4s;
+      position: relative;
+    }
+    .produto-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 30px 70px rgba(92,61,46,0.12);
+    }
+
+    .produto-img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+      transition: transform 0.6s var(--ease-smooth);
+      background: var(--blush);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 5rem;
+    }
+    .produto-card:hover .produto-img-wrap img { transform: scale(1.08); }
+    .produto-img-wrap {
+      overflow: hidden;
+      height: 220px;
+    }
+    .produto-img-wrap img {
+      width: 100%; height: 100%;
+      object-fit: cover;
+      transition: transform 0.6s var(--ease-smooth);
+    }
+    .produto-img-emoji {
+      width: 100%;
+      height: 220px;
+      background: linear-gradient(135deg, var(--blush), var(--ivory));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 5rem;
+      transition: transform 0.6s;
+    }
+    .produto-card:hover .produto-img-emoji { transform: scale(1.08); }
+
+    .produto-badge {
+      position: absolute;
+      top: 14px; right: 14px;
+      background: var(--gold);
+      color: var(--espresso);
+      font-size: 0.65rem;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 0.3rem 0.7rem;
+      border-radius: 50px;
+    }
+
+    .produto-body { padding: 1.5rem; }
+    .produto-cat {
+      font-size: 0.65rem;
+      font-weight: 500;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 0.4rem;
+    }
+    .produto-name {
+      font-family: var(--ff-disp);
+      font-size: 1.4rem;
+      font-weight: 600;
+      color: var(--mocha);
+      margin-bottom: 0.5rem;
+    }
+    .produto-desc {
+      font-size: 0.84rem;
+      font-weight: 300;
+      color: var(--text-lt);
+      line-height: 1.65;
+      margin-bottom: 1.2rem;
+    }
+    .produto-footer {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .produto-wa {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      font-size: 0.78rem;
+      font-weight: 500;
+      color: var(--mocha);
+      text-decoration: none;
+      border: 1px solid var(--blush);
+      padding: 0.5rem 1rem;
+      border-radius: 50px;
+      transition: all 0.3s;
+    }
+    .produto-wa:hover {
+      background: var(--mocha);
+      color: var(--cream);
+      border-color: var(--mocha);
+    }
+
+    /* ═══════════════════════════════════════════
+       SOBRE
+    ═══════════════════════════════════════════ */
+    .sobre {
+      background: var(--mocha);
+      position: relative;
+      overflow: hidden;
+    }
+    .sobre::before {
+      content:'';
+      position:absolute;
+      inset:0;
+      background: radial-gradient(ellipse 70% 70% at 80% 30%, rgba(200,169,106,0.15) 0%, transparent 70%);
+      pointer-events:none;
+    }
+    .sobre-inner {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 5rem;
+      align-items: center;
+    }
+    .sobre-text .section-eyebrow { color: var(--gold-lt); }
+    .sobre-text .section-eyebrow::before { background: var(--gold-lt); }
+    .sobre-text .section-title { color: var(--cream); }
+    .sobre-text .section-title em { color: var(--gold-lt); }
+    .sobre-p {
+      font-size: 1rem;
+      font-weight: 300;
+      color: rgba(250,246,240,0.75);
+      line-height: 1.85;
+      margin-bottom: 2rem;
+    }
+
+    .sobre-stats {
+      display: flex;
+      gap: 3rem;
+      margin-top: 2rem;
+    }
+    .stat { }
+    .stat-num {
+      font-family: var(--ff-disp);
+      font-size: 2.8rem;
+      font-weight: 600;
+      color: var(--gold-lt);
+      line-height: 1;
+    }
+    .stat-label {
+      font-size: 0.78rem;
+      font-weight: 300;
+      color: rgba(250,246,240,0.6);
+      letter-spacing: 0.08em;
+      margin-top: 0.3rem;
+    }
+
+    .sobre-visual {
+      position: relative;
+      display: flex;
+      justify-content: center;
+    }
+    .sobre-img-frame {
+      width: 400px;
+      height: 500px;
+      border-radius: 40% 60% 50% 50% / 60% 40% 55% 45%;
+      overflow: hidden;
+      background: linear-gradient(135deg, rgba(200,169,106,0.2), rgba(212,192,212,0.15));
+      border: 1px solid rgba(200,169,106,0.2);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 10rem;
+      position: relative;
+    }
+    .sobre-img-frame::after {
+      content:'';
+      position:absolute;
+      inset: 0;
+      background: linear-gradient(to bottom, transparent 50%, rgba(46,26,16,0.3));
+    }
+    .sobre-badge-float {
+      position: absolute;
+      bottom: -20px;
+      left: -20px;
+      background: var(--gold);
+      color: var(--espresso);
+      border-radius: 20px;
+      padding: 1.2rem 1.5rem;
+      font-family: var(--ff-disp);
+      box-shadow: 0 20px 50px rgba(0,0,0,0.25);
+    }
+    .sobre-badge-float .num {
+      font-size: 2.5rem;
+      font-weight: 600;
+      line-height: 1;
+      display: block;
+    }
+    .sobre-badge-float .lbl { font-size: 0.75rem; letter-spacing: 0.08em; }
+
+    /* ═══════════════════════════════════════════
+       AVALIAÇÕES
+    ═══════════════════════════════════════════ */
+    .avaliacoes { background: var(--ivory); }
+    .aval-header {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      align-items: flex-end;
+      margin-bottom: 3rem;
+      gap: 2rem;
+    }
+    .rating-big {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+    .rating-num {
+      font-family: var(--ff-disp);
+      font-size: 5rem;
+      font-weight: 300;
+      color: var(--mocha);
+      line-height: 1;
+    }
+    .rating-info .stars { font-size: 1.4rem; color: var(--gold); letter-spacing: 4px; }
+    .rating-info .count { font-size: 0.8rem; color: var(--text-lt); margin-top: 4px; }
+
+    .swiper-avaliacoes { overflow: hidden; }
+    .aval-card {
+      background: var(--cream);
+      border-radius: 24px;
+      padding: 2rem;
+      border: 1px solid rgba(237,217,200,0.6);
+      position: relative;
+      transition: box-shadow 0.3s;
+      height: auto;
+    }
+    .aval-card:hover {
+      box-shadow: 0 20px 50px rgba(92,61,46,0.08);
+    }
+    .aval-quote {
+      font-family: var(--ff-disp);
+      font-size: 4rem;
+      color: var(--gold);
+      opacity: 0.3;
+      line-height: 1;
+      position: absolute;
+      top: 1rem; left: 1.5rem;
+    }
+    .aval-text {
+      font-family: var(--ff-disp);
+      font-size: 1.15rem;
+      font-style: italic;
+      font-weight: 300;
+      color: var(--text);
+      line-height: 1.75;
+      margin-top: 1.5rem;
+      margin-bottom: 1.5rem;
+    }
+    .aval-stars { color: var(--gold); font-size: 0.85rem; letter-spacing: 3px; margin-bottom: 0.8rem; }
+    .aval-author {
+      display: flex;
+      align-items: center;
+      gap: 0.8rem;
+    }
+    .aval-avatar {
+      width: 40px; height: 40px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--blush), var(--lilac));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: var(--white);
+      font-family: var(--ff-disp);
+    }
+    .aval-name { font-size: 0.88rem; font-weight: 500; color: var(--mocha); }
+    .aval-via { font-size: 0.72rem; color: var(--text-lt); }
+
+    .swiper-btn-group {
+      display: flex;
+      gap: 0.8rem;
+      margin-top: 2.5rem;
+      justify-content: center;
+    }
+    .swiper-btn-custom {
+      width: 44px; height: 44px;
+      border-radius: 50%;
+      border: 1.5px solid var(--mauve);
+      background: transparent;
+      color: var(--mocha);
+      font-size: 1.1rem;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.3s;
+    }
+    .swiper-btn-custom:hover {
+      background: var(--mocha);
+      color: var(--cream);
+      border-color: var(--mocha);
+    }
+
+    /* ═══════════════════════════════════════════
+       CONTATO
+    ═══════════════════════════════════════════ */
+    .contato { background: var(--cream); }
+    .contato-inner {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 5rem;
+      align-items: center;
+    }
+    .contato-info { }
+    .info-item {
+      display: flex;
+      gap: 1rem;
+      align-items: flex-start;
+      margin-bottom: 2rem;
+      padding-bottom: 2rem;
+      border-bottom: 1px solid rgba(237,217,200,0.8);
+    }
+    .info-item:last-of-type { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+    .info-icon {
+      width: 44px; height: 44px;
+      min-width: 44px;
+      background: var(--ivory);
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.2rem;
+      border: 1px solid rgba(200,169,106,0.2);
+    }
+    .info-label { font-size: 0.72rem; font-weight: 500; letter-spacing: 0.15em; text-transform: uppercase; color: var(--gold); margin-bottom: 0.3rem; }
+    .info-value { font-size: 0.96rem; color: var(--text); font-weight: 400; line-height: 1.5; }
+
+    .contato-btns {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      margin-top: 2.5rem;
+    }
+    .btn-wa-lg {
+      background: #25D366;
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.6rem;
+      padding: 1rem 2rem;
+      border-radius: 50px;
+      text-decoration: none;
+      font-size: 0.9rem;
+      font-weight: 500;
+      transition: all 0.3s;
+      box-shadow: 0 6px 24px rgba(37,211,102,0.3);
+    }
+    .btn-wa-lg:hover {
+      background: #1ebe5c;
+      transform: translateY(-3px);
+      box-shadow: 0 12px 36px rgba(37,211,102,0.4);
+    }
+    .btn-mapa {
+      background: var(--ivory);
+      color: var(--mocha);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.6rem;
+      padding: 1rem 2rem;
+      border-radius: 50px;
+      text-decoration: none;
+      font-size: 0.9rem;
+      font-weight: 400;
+      border: 1.5px solid var(--blush);
+      transition: all 0.3s;
+    }
+    .btn-mapa:hover {
+      background: var(--mocha);
+      color: var(--cream);
+      border-color: var(--mocha);
+      transform: translateY(-3px);
+    }
+
+    .mapa-container {
+      border-radius: 28px;
+      overflow: hidden;
+      box-shadow: 0 30px 80px rgba(92,61,46,0.12);
+      border: 1px solid rgba(237,217,200,0.5);
+      height: 400px;
+    }
+    .mapa-container iframe {
+      width: 100%; height: 100%;
+      border: none;
+      filter: sepia(15%) contrast(0.95);
+    }
+
+    /* ═══════════════════════════════════════════
+       FOOTER
+    ═══════════════════════════════════════════ */
+    footer {
+      background: var(--espresso);
+      padding: 4rem 2rem 2rem;
+      position: relative;
+      overflow: hidden;
+    }
+    footer::before {
+      content:'';
+      position:absolute;
+      top:0; left:0; right:0;
+      height:1px;
+      background: linear-gradient(90deg, transparent, rgba(200,169,106,0.4), transparent);
+    }
+    .footer-inner {
+      max-width: 1280px;
+      margin: 0 auto;
+    }
+    .footer-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      flex-wrap: wrap;
+      gap: 3rem;
+      margin-bottom: 3rem;
+      padding-bottom: 3rem;
+      border-bottom: 1px solid rgba(255,255,255,0.06);
+    }
+    .footer-logo .logo-top { color: var(--cream); }
+    .footer-logo .logo-sub { color: var(--gold); }
+    .footer-desc {
+      font-size: 0.85rem;
+      font-weight: 300;
+      color: rgba(250,246,240,0.45);
+      line-height: 1.7;
+      max-width: 260px;
+      margin-top: 1rem;
+    }
+    .footer-links h4 {
+      font-size: 0.7rem;
+      font-weight: 500;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 1.2rem;
+    }
+    .footer-links ul { list-style: none; }
+    .footer-links li { margin-bottom: 0.7rem; }
+    .footer-links a {
+      font-size: 0.85rem;
+      font-weight: 300;
+      color: rgba(250,246,240,0.55);
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+    .footer-links a:hover { color: var(--cream); }
+
+    .footer-social h4 {
+      font-size: 0.7rem;
+      font-weight: 500;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 1.2rem;
+    }
+    .social-icons {
+      display: flex;
+      gap: 0.8rem;
+    }
+    .social-icon {
+      width: 42px; height: 42px;
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: rgba(250,246,240,0.55);
+      font-size: 1rem;
+      text-decoration: none;
+      transition: all 0.3s;
+      background: transparent;
+    }
+    .social-icon:hover {
+      background: var(--gold);
+      color: var(--espresso);
+      border-color: var(--gold);
+      transform: translateY(-3px);
+    }
+
+    .footer-bottom {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+    .footer-copy {
+      font-size: 0.78rem;
+      font-weight: 300;
+      color: rgba(250,246,240,0.3);
+    }
+    .footer-tag {
+      font-size: 0.72rem;
+      color: rgba(250,246,240,0.2);
+    }
+
+    /* ═══════════════════════════════════════════
+       FLOATING WA BUTTON
+    ═══════════════════════════════════════════ */
+    .wa-float {
+      position: fixed;
+      bottom: 2rem; right: 2rem;
+      z-index: 900;
+      display: flex;
+      align-items: center;
+      gap: 0.8rem;
+      text-decoration: none;
+    }
+    .wa-float-btn {
+      width: 58px; height: 58px;
+      background: #25D366;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5rem;
+      box-shadow: 0 8px 30px rgba(37,211,102,0.45);
+      transition: transform 0.3s, box-shadow 0.3s;
+      animation: waFloat 3s ease-in-out infinite;
+    }
+    @keyframes waFloat {
+      0%,100% { transform: scale(1); }
+      50%      { transform: scale(1.06); }
+    }
+    .wa-float-btn:hover { transform: scale(1.12) !important; box-shadow: 0 12px 40px rgba(37,211,102,0.55); }
+
+    .wa-pulse {
+      position: absolute;
+      inset: -8px;
+      background: #25D366;
+      border-radius: 50%;
+      opacity: 0;
+      animation: pulse 2.5s ease-out infinite;
+    }
+    @keyframes pulse {
+      0%  { opacity:0.4; transform:scale(1); }
+      100%{ opacity:0;   transform:scale(1.5); }
+    }
+
+    .wa-label {
+      background: var(--white);
+      color: var(--text);
+      font-size: 0.78rem;
+      font-weight: 500;
+      padding: 0.45rem 0.9rem;
+      border-radius: 50px;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+      white-space: nowrap;
+      opacity: 0;
+      transform: translateX(10px);
+      transition: all 0.3s;
+      pointer-events: none;
+    }
+    .wa-float:hover .wa-label { opacity: 1; transform: translateX(0); }
+
+    /* ═══════════════════════════════════════════
+       KEYFRAMES GLOBALS
+    ═══════════════════════════════════════════ */
+    @keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+    @keyframes slideUp { from { opacity:0; transform:translateY(30px); } to { opacity:1; transform:translateY(0); } }
+    @keyframes slideDown { from { opacity:0; transform:translateY(-20px); } to { opacity:1; transform:translateY(0); } }
+    @keyframes fadeInRight { from { opacity:0; transform:translateX(40px); } to { opacity:1; transform:translateX(0); } }
+
+    /* ═══════════════════════════════════════════
+       RESPONSIVE
+    ═══════════════════════════════════════════ */
+    @media (max-width: 1100px) {
+      .dif-grid { grid-template-columns: repeat(2, 1fr); }
+      .produtos-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+
+    @media (max-width: 900px) {
+      .hero-content { grid-template-columns: 1fr; gap: 2rem; padding: 3rem 1.5rem; text-align: center; }
+      .hero-visual { display: none; }
+      .hero-sub { margin: 0 auto 2.5rem; }
+      .hero-btns { justify-content: center; }
+      .sobre-inner { grid-template-columns: 1fr; gap: 3rem; }
+      .sobre-visual { display: none; }
+      .contato-inner { grid-template-columns: 1fr; gap: 3rem; }
+      .nav-links, .btn-wa-nav { display: none; }
+      .hamburger { display: flex; }
+      .aval-header { grid-template-columns: 1fr; }
+    }
+
+    @media (max-width: 640px) {
+      .dif-grid { grid-template-columns: 1fr; }
+      .produtos-grid { grid-template-columns: 1fr; }
+      section { padding: 5rem 1.5rem; }
+      .sobre-stats { gap: 2rem; }
+      .hero-h1 { font-size: 2.5rem; }
+      .footer-top { flex-direction: column; }
+    }
+
+    /* AOS overrides */
+    [data-aos] { transition-duration: 800ms !important; }
+  </style>
+</head>
+<body>
+
+<!-- ─── HEADER ─── -->
+<header id="header">
+  <nav>
+    <a class="logo" href="#">
+      <span class="logo-top">Gela Mix</span>
+      <span class="logo-sub">Gelato Artesanal</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="#inicio">Início</a></li>
+      <li><a href="#cardapio">Cardápio</a></li>
+      <li><a href="#sobre">Sobre</a></li>
+      <li><a href="#avaliacoes">Avaliações</a></li>
+      <li><a href="#contato">Contato</a></li>
+    </ul>
+    <a href="https://wa.me/5541988261398?text=Olá! Gostaria de fazer um pedido." class="btn-wa-nav" target="_blank">Peça Agora 🍨</a>
+    <button class="hamburger" id="hamburger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+</header>
+
+<!-- ─── MOBILE MENU ─── -->
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#inicio" class="mob-link">Início</a>
+  <a href="#cardapio" class="mob-link">Cardápio</a>
+  <a href="#sobre" class="mob-link">Sobre</a>
+  <a href="#avaliacoes" class="mob-link">Avaliações</a>
+  <a href="#contato" class="mob-link">Contato</a>
+  <a href="https://wa.me/5541988261398" target="_blank" style="background:var(--gold);color:var(--espresso);padding:0.7rem 2rem;border-radius:50px;font-family:var(--ff-body);font-size:0.9rem;font-weight:500;">Peça Agora 🍨</a>
+</div>
+
+<!-- ─── HERO ─── -->
+<section class="hero" id="inicio">
+  <div class="hero-bg"></div>
+  <div class="hero-circle hero-circle-1"></div>
+  <div class="hero-circle hero-circle-2"></div>
+
+  <div class="hero-content">
+    <div class="hero-text">
+      <div class="hero-badge"><span class="star">★★★★★</span> Avaliação 5.0 no Google</div>
+      <h1 class="hero-h1">Experimente o <em>verdadeiro sabor</em> do gelato artesanal</h1>
+      <p class="hero-h1-2">Qualidade que você sente no primeiro sabor</p>
+      <p class="hero-sub">Variedade de gelatos, açaí e bebidas incríveis, feitos com ingredientes selecionados para uma experiência única em Pinhais.</p>
+      <div class="hero-btns">
+        <a href="#cardapio" class="btn-primary">Ver Cardápio</a>
+        <a href="https://wa.me/5541988261398?text=Olá! Gostaria de fazer um pedido." target="_blank" class="btn-ghost">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.127.558 4.122 1.528 5.849L.057 23.857l6.191-1.447A11.937 11.937 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.886 0-3.65-.5-5.179-1.375l-.371-.218-3.836.896.939-3.735-.241-.391A9.947 9.947 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
+          Falar no WhatsApp
+        </a>
+      </div>
+    </div>
+
+    <div class="hero-visual">
+      <div class="hero-img-wrapper">
+        <!-- Gelato illustration using CSS art -->
+        <svg viewBox="0 0 460 520" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:100%;">
+          <defs>
+            <radialGradient id="bg" cx="50%" cy="40%">
+              <stop offset="0%" stop-color="#F3EDE2"/>
+              <stop offset="100%" stop-color="#EDD9C8"/>
+            </radialGradient>
+            <radialGradient id="scoop1" cx="40%" cy="30%">
+              <stop offset="0%" stop-color="#F9E4D4"/>
+              <stop offset="100%" stop-color="#E8BFA8"/>
+            </radialGradient>
+            <radialGradient id="scoop2" cx="40%" cy="30%">
+              <stop offset="0%" stop-color="#D4C0D4"/>
+              <stop offset="100%" stop-color="#A07898"/>
+            </radialGradient>
+            <radialGradient id="scoop3" cx="40%" cy="30%">
+              <stop offset="0%" stop-color="#C8E6C9"/>
+              <stop offset="100%" stop-color="#81C784"/>
+            </radialGradient>
+            <radialGradient id="cone" cx="50%" cy="20%">
+              <stop offset="0%" stop-color="#F0C080"/>
+              <stop offset="100%" stop-color="#C8914A"/>
+            </radialGradient>
+          </defs>
+          <rect width="460" height="520" fill="url(#bg)"/>
+          <!-- Cone -->
+          <polygon points="230,460 170,270 290,270" fill="url(#cone)" rx="4"/>
+          <!-- Cone grid lines -->
+          <line x1="200" y1="280" x2="225" y2="460" stroke="rgba(200,145,74,0.5)" stroke-width="1.5"/>
+          <line x1="230" y1="278" x2="230" y2="460" stroke="rgba(200,145,74,0.5)" stroke-width="1.5"/>
+          <line x1="260" y1="280" x2="235" y2="460" stroke="rgba(200,145,74,0.5)" stroke-width="1.5"/>
+          <line x1="175" y1="310" x2="285" y2="310" stroke="rgba(200,145,74,0.4)" stroke-width="1"/>
+          <line x1="180" y1="340" x2="280" y2="340" stroke="rgba(200,145,74,0.4)" stroke-width="1"/>
+          <line x1="190" y1="370" x2="270" y2="370" stroke="rgba(200,145,74,0.4)" stroke-width="1"/>
+          <line x1="200" y1="400" x2="260" y2="400" stroke="rgba(200,145,74,0.4)" stroke-width="1"/>
+          <!-- Bottom scoop -->
+          <ellipse cx="230" cy="285" rx="70" ry="55" fill="url(#scoop1)"/>
+          <ellipse cx="218" cy="270" rx="22" ry="14" fill="rgba(255,255,255,0.35)" transform="rotate(-15,218,270)"/>
+          <!-- Middle scoop -->
+          <ellipse cx="220" cy="215" rx="68" ry="58" fill="url(#scoop2)"/>
+          <ellipse cx="208" cy="200" rx="20" ry="12" fill="rgba(255,255,255,0.3)" transform="rotate(-10,208,200)"/>
+          <!-- Top scoop -->
+          <ellipse cx="238" cy="148" rx="60" ry="55" fill="url(#scoop3)"/>
+          <ellipse cx="224" cy="133" rx="18" ry="11" fill="rgba(255,255,255,0.35)" transform="rotate(-10,224,133)"/>
+          <!-- Drip -->
+          <path d="M 295 215 Q 310 230 305 260" stroke="#E8BFA8" stroke-width="8" fill="none" stroke-linecap="round"/>
+          <circle cx="305" cy="263" r="5" fill="#E8BFA8"/>
+          <!-- Sprinkles -->
+          <rect x="240" y="100" width="12" height="4" rx="2" fill="#C8A96A" transform="rotate(30)"/>
+          <rect x="275" y="175" width="10" height="4" rx="2" fill="#A07898" transform="rotate(-20,275,175)"/>
+          <rect x="155" y="190" width="10" height="4" rx="2" fill="#C8A96A" transform="rotate(50,155,190)"/>
+          <rect x="285" y="150" width="8" height="3" rx="2" fill="#81C784" transform="rotate(-35,285,150)"/>
+          <rect x="170" y="140" width="10" height="4" rx="2" fill="#A07898" transform="rotate(15,170,140)"/>
+          <!-- Cherry on top -->
+          <circle cx="238" cy="88" r="16" fill="#C0392B"/>
+          <circle cx="232" cy="82" r="6" fill="rgba(255,255,255,0.25)"/>
+          <path d="M 238 72 Q 248 50 260 55" stroke="#2E7D32" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+          <!-- Decorative dots background -->
+          <circle cx="80" cy="80" r="6" fill="rgba(200,169,106,0.2)"/>
+          <circle cx="380" cy="120" r="8" fill="rgba(212,192,212,0.25)"/>
+          <circle cx="60" cy="380" r="10" fill="rgba(200,169,106,0.15)"/>
+          <circle cx="400" cy="400" r="7" fill="rgba(212,192,212,0.2)"/>
+          <circle cx="100" cy="260" r="5" fill="rgba(200,169,106,0.18)"/>
+          <circle cx="370" cy="280" r="9" fill="rgba(160,120,152,0.15)"/>
+        </svg>
+      </div>
+
+      <div class="hero-floating-card card-1">
+        <div class="card-stars">★★★★★</div>
+        <div class="card-label">Google Avaliações</div>
+        <div class="card-value">5.0</div>
+      </div>
+      <div class="hero-floating-card card-2">
+        <div class="card-emoji">🍨</div>
+        <div class="card-text">+20 sabores</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="scroll-hint" onclick="document.querySelector('#diferenciais').scrollIntoView({behavior:'smooth'})">
+    <span>Explorar</span>
+    <div class="scroll-arrow"></div>
+  </div>
+</section>
+
+<!-- ─── DIFERENCIAIS ─── -->
+<section class="diferenciais" id="diferenciais">
+  <div class="container">
+    <div class="dif-header" data-aos="fade-up">
+      <div class="section-eyebrow">Por que nos escolher</div>
+      <h2 class="section-title">A experiência <em>Gela Mix</em></h2>
+      <p class="section-desc">Cada detalhe foi pensado para proporcionar o melhor gelato artesanal de Pinhais.</p>
+    </div>
+    <div class="dif-grid">
+      <div class="dif-card" data-aos="fade-up" data-aos-delay="0">
+        <span class="dif-icon">🌿</span>
+        <div class="dif-card-title">Alta Qualidade</div>
+        <p class="dif-card-desc">Selecionamos os melhores ingredientes naturais para garantir sabores autênticos e saudáveis em cada porção.</p>
+      </div>
+      <div class="dif-card" data-aos="fade-up" data-aos-delay="100">
+        <span class="dif-icon">🎨</span>
+        <div class="dif-card-title">Grande Variedade</div>
+        <p class="dif-card-desc">Mais de 20 sabores de gelato artesanal para você explorar. De clássicos a opções surpreendentes e criativas.</p>
+      </div>
+      <div class="dif-card" data-aos="fade-up" data-aos-delay="200">
+        <span class="dif-icon">✨</span>
+        <div class="dif-card-title">Ambiente Agradável</div>
+        <p class="dif-card-desc">Um espaço pensado para o seu conforto. Venha desfrutar de momentos especiais com quem você ama.</p>
+      </div>
+      <div class="dif-card" data-aos="fade-up" data-aos-delay="300">
+        <span class="dif-icon">🥤</span>
+        <div class="dif-card-title">Bebidas Especiais</div>
+        <p class="dif-card-desc">Além dos gelatos, oferecemos bebidas especiais selecionadas para complementar sua experiência.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── CARDÁPIO ─── -->
+<section class="cardapio" id="cardapio">
+  <div class="container">
+    <div class="cardapio-header">
+      <div data-aos="fade-up">
+        <div class="section-eyebrow">Nossos produtos</div>
+        <h2 class="section-title">O que nos <em>amam</em></h2>
+      </div>
+      <div class="cardapio-tabs" data-aos="fade-up">
+        <button class="tab-btn active" data-tab="todos">Todos</button>
+        <button class="tab-btn" data-tab="gelato">Gelatos</button>
+        <button class="tab-btn" data-tab="acai">Açaí</button>
+        <button class="tab-btn" data-tab="bebidas">Bebidas</button>
+      </div>
+    </div>
+
+    <div class="produtos-grid" id="produtosGrid">
+      <!-- Gelatos -->
+      <div class="produto-card" data-cat="gelato" data-aos="fade-up" data-aos-delay="0">
+        <div class="produto-img-emoji">🍦</div>
+        <div class="produto-badge">Favorito</div>
+        <div class="produto-body">
+          <div class="produto-cat">Gelato</div>
+          <div class="produto-name">Pistachio Premium</div>
+          <p class="produto-desc">Cremoso e intenso, feito com pistache italiano selecionado. Uma experiência sofisticada em cada colher.</p>
+          <div class="produto-footer">
+            <a href="https://wa.me/5541988261398?text=Quero saber mais sobre o Gelato Pistachio!" target="_blank" class="produto-wa">Pedir agora →</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="produto-card" data-cat="gelato" data-aos="fade-up" data-aos-delay="100">
+        <div class="produto-img-emoji">🍓</div>
+        <div class="produto-body">
+          <div class="produto-cat">Gelato</div>
+          <div class="produto-name">Morango Artesanal</div>
+          <p class="produto-desc">Feito com morangos frescos e naturais. Sabor vibrante, levemente ácido e absolutamente irresistível.</p>
+          <div class="produto-footer">
+            <a href="https://wa.me/5541988261398?text=Quero o Gelato de Morango!" target="_blank" class="produto-wa">Pedir agora →</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="produto-card" data-cat="gelato" data-aos="fade-up" data-aos-delay="200">
+        <div class="produto-img-emoji">🍫</div>
+        <div class="produto-body">
+          <div class="produto-cat">Gelato</div>
+          <div class="produto-name">Cioccolato Fondente</div>
+          <p class="produto-desc">Chocolate belga intenso e aveludado. Para os amantes do chocolate mais puro e sofisticado.</p>
+          <div class="produto-footer">
+            <a href="https://wa.me/5541988261398?text=Quero o Gelato de Chocolate!" target="_blank" class="produto-wa">Pedir agora →</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="produto-card" data-cat="acai" data-aos="fade-up" data-aos-delay="0">
+        <div class="produto-img-emoji">🫐</div>
+        <div class="produto-badge">Novo</div>
+        <div class="produto-body">
+          <div class="produto-cat">Açaí</div>
+          <div class="produto-name">Açaí Premium</div>
+          <p class="produto-desc">Açaí puro da Amazônia, cremoso e naturalmente rico. Com granola artesanal, frutas e mel da serra.</p>
+          <div class="produto-footer">
+            <a href="https://wa.me/5541988261398?text=Quero saber mais sobre o Açaí!" target="_blank" class="produto-wa">Pedir agora →</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="produto-card" data-cat="acai" data-aos="fade-up" data-aos-delay="100">
+        <div class="produto-img-emoji">🍇</div>
+        <div class="produto-body">
+          <div class="produto-cat">Açaí</div>
+          <div class="produto-name">Açaí com Gelato</div>
+          <p class="produto-desc">A fusão perfeita: açaí cremoso com uma bola do seu gelato favorito. O melhor dos dois mundos.</p>
+          <div class="produto-footer">
+            <a href="https://wa.me/5541988261398?text=Quero o Açaí com Gelato!" target="_blank" class="produto-wa">Pedir agora →</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="produto-card" data-cat="bebidas" data-aos="fade-up" data-aos-delay="200">
+        <div class="produto-img-emoji">🧃</div>
+        <div class="produto-body">
+          <div class="produto-cat">Bebidas Especiais</div>
+          <div class="produto-name">Milk Shake Artesanal</div>
+          <p class="produto-desc">Milk shake cremoso feito com nosso gelato artesanal. Escolha o seu sabor favorito e mergulhe nessa delícia.</p>
+          <div class="produto-footer">
+            <a href="https://wa.me/5541988261398?text=Quero o Milk Shake!" target="_blank" class="produto-wa">Pedir agora →</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div style="text-align:center; margin-top:3rem;" data-aos="fade-up">
+      <a href="https://wa.me/5541988261398?text=Olá! Gostaria de ver o cardápio completo." target="_blank" class="btn-ghost" style="display:inline-flex; justify-content:center;">Ver cardápio completo no WhatsApp →</a>
+    </div>
+  </div>
+</section>
+
+<!-- ─── SOBRE ─── -->
+<section class="sobre" id="sobre">
+  <div class="container">
+    <div class="sobre-inner">
+      <div class="sobre-text" data-aos="fade-right">
+        <div class="section-eyebrow">Nossa história</div>
+        <h2 class="section-title">Referência em <em>qualidade</em> e sabor</h2>
+        <p class="sobre-p">A Gela Mix Gelato é referência em qualidade e sabor em Pinhais. Com avaliação máxima de 5.0 no Google, oferecemos uma experiência única com gelatos artesanais, açaí e bebidas especiais, preparados com carinho e ingredientes selecionados.</p>
+        <p class="sobre-p">Nossa missão é criar momentos de alegria e sofisticação em cada visita. Do primeiro ao último sabor, você vai sentir a diferença da qualidade artesanal.</p>
+        <div class="sobre-stats">
+          <div class="stat">
+            <div class="stat-num">5.0</div>
+            <div class="stat-label">Nota Google</div>
+          </div>
+          <div class="stat">
+            <div class="stat-num">25+</div>
+            <div class="stat-label">Avaliações</div>
+          </div>
+          <div class="stat">
+            <div class="stat-num">20+</div>
+            <div class="stat-label">Sabores</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="sobre-visual" data-aos="fade-left">
+        <div class="sobre-img-frame">🍨</div>
+        <div class="sobre-badge-float">
+          <span class="num">★ 5.0</span>
+          <span class="lbl">Pinhais · PR</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── AVALIAÇÕES ─── -->
+<section class="avaliacoes" id="avaliacoes">
+  <div class="container">
+    <div class="aval-header" data-aos="fade-up">
+      <div>
+        <div class="section-eyebrow">Depoimentos</div>
+        <h2 class="section-title">O que nossos clientes <em>dizem</em></h2>
+        <div class="rating-big">
+          <div class="rating-num">5.0</div>
+          <div class="rating-info">
+            <div class="stars">★★★★★</div>
+            <div class="count">25 avaliações no Google</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="swiper swiper-avaliacoes" data-aos="fade-up">
+      <div class="swiper-wrapper">
+
+        <div class="swiper-slide">
+          <div class="aval-card">
+            <div class="aval-quote">"</div>
+            <div class="aval-stars">★★★★★</div>
+            <p class="aval-text">Ambiente agradável e ainda conta com boas opções de bebidas. Recomendo demais!</p>
+            <div class="aval-author">
+              <div class="aval-avatar">A</div>
+              <div>
+                <div class="aval-name">Ana Paula</div>
+                <div class="aval-via">Google Reviews</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="swiper-slide">
+          <div class="aval-card">
+            <div class="aval-quote">"</div>
+            <div class="aval-stars">★★★★★</div>
+            <p class="aval-text">Tem bastante opção de gelato, açaí e bebidas, tudo muito bom mesmo. Virei cliente fiel!</p>
+            <div class="aval-author">
+              <div class="aval-avatar">C</div>
+              <div>
+                <div class="aval-name">Carlos Eduardo</div>
+                <div class="aval-via">Google Reviews</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="swiper-slide">
+          <div class="aval-card">
+            <div class="aval-quote">"</div>
+            <div class="aval-stars">★★★★★</div>
+            <p class="aval-text">Os sabores são incríveis e a qualidade é de outro nível! Nota máxima com toda a merecida.</p>
+            <div class="aval-author">
+              <div class="aval-avatar">M</div>
+              <div>
+                <div class="aval-name">Mariana Silva</div>
+                <div class="aval-via">Google Reviews</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="swiper-slide">
+          <div class="aval-card">
+            <div class="aval-quote">"</div>
+            <div class="aval-stars">★★★★★</div>
+            <p class="aval-text">Melhor gelato de Pinhais, sem dúvida! Ingredientes frescos, sabor autêntico. Vale cada centavo.</p>
+            <div class="aval-author">
+              <div class="aval-avatar">R</div>
+              <div>
+                <div class="aval-name">Roberto Lima</div>
+                <div class="aval-via">Google Reviews</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="swiper-slide">
+          <div class="aval-card">
+            <div class="aval-quote">"</div>
+            <div class="aval-stars">★★★★★</div>
+            <p class="aval-text">Fui com minha família e todo mundo adorou! As crianças ficaram encantadas com os sabores. Voltaremos sempre.</p>
+            <div class="aval-author">
+              <div class="aval-avatar">F</div>
+              <div>
+                <div class="aval-name">Fernanda Costa</div>
+                <div class="aval-via">Google Reviews</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="swiper-btn-group">
+      <button class="swiper-btn-custom" id="aval-prev">←</button>
+      <button class="swiper-btn-custom" id="aval-next">→</button>
+    </div>
+  </div>
+</section>
+
+<!-- ─── CONTATO ─── -->
+<section class="contato" id="contato">
+  <div class="container">
+    <div class="contato-inner">
+      <div class="contato-info" data-aos="fade-right">
+        <div class="section-eyebrow">Onde nos encontrar</div>
+        <h2 class="section-title">Venha nos <em>visitar</em></h2>
+
+        <div class="info-item">
+          <div class="info-icon">📍</div>
+          <div>
+            <div class="info-label">Endereço</div>
+            <div class="info-value">Rua Clemente Itsyo Horikoshi, 330<br>Pinhais – PR</div>
+          </div>
+        </div>
+
+        <div class="info-item">
+          <div class="info-icon">📱</div>
+          <div>
+            <div class="info-label">Telefone / WhatsApp</div>
+            <div class="info-value">(41) 98826-1398</div>
+          </div>
+        </div>
+
+        <div class="info-item">
+          <div class="info-icon">⏰</div>
+          <div>
+            <div class="info-label">Horário</div>
+            <div class="info-value">Entre em contato para confirmar horários de funcionamento</div>
+          </div>
+        </div>
+
+        <div class="contato-btns">
+          <a href="https://wa.me/5541988261398?text=Olá! Vim pelo site e gostaria de mais informações." target="_blank" class="btn-wa-lg">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.127.558 4.122 1.528 5.849L.057 23.857l6.191-1.447A11.937 11.937 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.886 0-3.65-.5-5.179-1.375l-.371-.218-3.836.896.939-3.735-.241-.391A9.947 9.947 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
+            Falar no WhatsApp
+          </a>
+          <a href="https://www.google.com/maps/search/Rua+Clemente+Itsyo+Horikoshi+330+Pinhais+PR" target="_blank" class="btn-mapa">
+            🗺️ Ver no Google Maps
+          </a>
+        </div>
+      </div>
+
+      <div data-aos="fade-left">
+        <div class="mapa-container">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3602.5!2d-49.18!3d-25.44!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjXCsDI2JzI0LjAiUyA0OcKwMTAnNDguMCJX!5e0!3m2!1spt-BR!2sbr!4v1!5m2!1spt-BR!2sbr"
+            allowfullscreen="" loading="lazy"
+            title="Localização Gela Mix Gelato">
+          </iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── FOOTER ─── -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div>
+        <a class="logo footer-logo" href="#">
+          <span class="logo-top">Gela Mix</span>
+          <span class="logo-sub">Gelato Artesanal</span>
+        </a>
+        <p class="footer-desc">Gelato artesanal premium em Pinhais – PR. Qualidade que você sente no primeiro sabor.</p>
+      </div>
+
+      <div class="footer-links">
+        <h4>Navegação</h4>
+        <ul>
+          <li><a href="#inicio">Início</a></li>
+          <li><a href="#cardapio">Cardápio</a></li>
+          <li><a href="#sobre">Sobre nós</a></li>
+          <li><a href="#avaliacoes">Avaliações</a></li>
+          <li><a href="#contato">Contato</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-links">
+        <h4>Contato</h4>
+        <ul>
+          <li><a href="https://wa.me/5541988261398" target="_blank">(41) 98826-1398</a></li>
+          <li><a href="#">Pinhais – PR</a></li>
+          <li><a href="https://wa.me/5541988261398" target="_blank">Fale no WhatsApp</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-social">
+        <h4>Redes Sociais</h4>
+        <div class="social-icons">
+          <a href="#" class="social-icon" aria-label="Instagram" title="Instagram">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+          </a>
+          <a href="https://wa.me/5541988261398" target="_blank" class="social-icon" aria-label="WhatsApp" title="WhatsApp">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.127.558 4.122 1.528 5.849L.057 23.857l6.191-1.447A11.937 11.937 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.886 0-3.65-.5-5.179-1.375l-.371-.218-3.836.896.939-3.735-.241-.391A9.947 9.947 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
+          </a>
+          <a href="#" class="social-icon" aria-label="Facebook" title="Facebook">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p class="footer-copy">© 2025 Gela Mix Gelato. Todos os direitos reservados.</p>
+      <p class="footer-tag">Pinhais – PR · Gelato Artesanal Premium</p>
+    </div>
+  </div>
+</footer>
+
+<!-- ─── FLOATING WA ─── -->
+<a href="https://wa.me/5541988261398?text=Olá! Vim pelo site e gostaria de fazer um pedido." target="_blank" class="wa-float" aria-label="WhatsApp">
+  <span class="wa-label">Fale conosco!</span>
+  <div class="wa-float-btn" style="position:relative;">
+    <div class="wa-pulse"></div>
+    <svg width="26" height="26" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.127.558 4.122 1.528 5.849L.057 23.857l6.191-1.447A11.937 11.937 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.886 0-3.65-.5-5.179-1.375l-.371-.218-3.836.896.939-3.735-.241-.391A9.947 9.947 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
+  </div>
+</a>
+
+<!-- ─── SCRIPTS ─── -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script>
+  // AOS Init
+  AOS.init({ duration: 750, easing: 'ease-out-cubic', once: true, offset: 80 });
+
+  // Header scroll
+  const header = document.getElementById('header');
+  window.addEventListener('scroll', () => {
+    header.classList.toggle('scrolled', window.scrollY > 40);
+  });
+
+  // Hamburger menu
+  const hamburger = document.getElementById('hamburger');
+  const mobileMenu = document.getElementById('mobileMenu');
+  hamburger.addEventListener('click', () => {
+    hamburger.classList.toggle('open');
+    mobileMenu.classList.toggle('open');
+    document.body.style.overflow = mobileMenu.classList.contains('open') ? 'hidden' : '';
+  });
+  document.querySelectorAll('.mob-link, .mobile-menu a').forEach(link => {
+    link.addEventListener('click', () => {
+      hamburger.classList.remove('open');
+      mobileMenu.classList.remove('open');
+      document.body.style.overflow = '';
+    });
+  });
+
+  // Swiper
+  const swiper = new Swiper('.swiper-avaliacoes', {
+    slidesPerView: 1,
+    spaceBetween: 24,
+    loop: true,
+    autoplay: { delay: 4500, disableOnInteraction: false },
+    breakpoints: {
+      640:  { slidesPerView: 2 },
+      1024: { slidesPerView: 3 },
+    }
+  });
+  document.getElementById('aval-prev').addEventListener('click', () => swiper.slidePrev());
+  document.getElementById('aval-next').addEventListener('click', () => swiper.slideNext());
+
+  // Tabs
+  const tabs = document.querySelectorAll('.tab-btn');
+  const cards = document.querySelectorAll('.produto-card');
+  tabs.forEach(tab => {
+    tab.addEventListener('click', () => {
+      tabs.forEach(t => t.classList.remove('active'));
+      tab.classList.add('active');
+      const cat = tab.dataset.tab;
+      cards.forEach(card => {
+        if (cat === 'todos' || card.dataset.cat === cat) {
+          card.style.display = '';
+          card.style.animation = 'fadeIn 0.4s ease both';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    });
+  });
+
+  // Nav smooth scroll
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+      const target = document.querySelector(this.getAttribute('href'));
+      if (target) {
+        e.preventDefault();
+        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    });
+  });
+</script>
+</body>
+</html>
